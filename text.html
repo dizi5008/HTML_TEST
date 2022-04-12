@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function getdata() {
+            var req = new XMLHttpRequest();
+            req.open("get","http://127.0.0.1:5500/myform.html");
+            req.onload = function(){
+                alert(this.responseText);
+            };
+            req.send();
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <span onclick="getdata();">提交表單</span>
+    </div>
+    <hr/>
+        <div id="content"></div>
+</body>
+</html>
